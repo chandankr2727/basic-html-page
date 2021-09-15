@@ -43,7 +43,8 @@
     <p>In this example we drew a picture of a tree. The tree is an abstract model of the possible sequences of choices
         we could make. There is also a data structure called a tree, but usually we don't have a data structure to tell
         us what choices we have. (If we do have an actual tree data structure, backtracking on it is called
-        <i>depth-first tree searching</i>.)</p>
+        <i>depth-first tree searching</i>.)
+    </p>
     <h3>The backtracking algorithm.</h3>
     <p>Here is the algorithm (in pseudocode) for doing backtracking from a given node n:</p>
     <pre><p style="color: darkred; font-size: large;" >
@@ -191,7 +192,8 @@
         <b>children</b>. The children are referred to as the <b>left child</b> and/or the <b>right child</b>. All nodes
         are reachable (by one or more steps) from the root node, and there are no cycles. For our purposes, although
         this is not part of the definition of a binary tree, we will say that a node might or might not be a goal node,
-        and will contain its name. The first example in this paper (which we repeat here) shows a binary tree.</p>
+        and will contain its name. The first example in this paper (which we repeat here) shows a binary tree.
+    </p>
     <br>
     <center><img src="./Images/image1.gif" alt=""></center>
     <br><br>
@@ -535,154 +537,134 @@
     <br>
     For example, you could make the following sequence of moves:
     <br><br>
-<table>
-    <tr>
-    <table align="center" border="0" cellpadding="8" cellspacing="0">
-        <tbody>
-            <tr>
-                <td align="right"><b>Starting Position:&nbsp;</b></td>
-                <td>
-                    <table align="right" border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
-                                <td width="44"></td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
+    <table align="center" border="0" cellpadding="7">
+                <tbody>
+                    <tr>
+                        <td ><b>Starting Position:&nbsp;&nbsp;</b></td>
+                        <td>
+                            <table  border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
+                                        <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
+                                        <td width="44"></td>
+                                        <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                        <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td ><b>Black aoves ahead:</b></td>
+                        <td>
+                            <table  border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
+                                        <td width="44"></td>
+                                        <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
+                                        <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                        <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td ><b>White jumps:&nbsp;</b></td>
+                        <td>
+                            <table  border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
+                                        <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                        <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
+                                        <td width="44"></td>
+                                        <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            <tbody>
+                <tr>
+                    <td ><b>Black moves ahead:</b></td>
+                    <td>
+                        <table  border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
+                                    <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                    <td width="44"></td>
+                                    <td width="44"><img src="./Images/black-ball.gif" alt="" </td>
+                                    <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><b>Black jumps:&nbsp;</b></td>
+                    <td>
+                        <table  border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td width="44"></td>
+                                    <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                    <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
+                                    <td width="44"><img src="./Images/black-ball.gif" alt="" </td>
+                                    <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td ><b>White moves ahead:</b></td>
+                    <td>
+                        <table  border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td width="44"></td>
+                                    <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                    <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
+                                    <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
+                                    <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td ><b>Stuck!</b></td>
+                    <td>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td width="44"></td>
+                                    <td width="44"></td>
+                                    <td width="44"></td>
+                                    <td width="44"></td>
+                                    <td width="44"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
     </table>
-    </tr>
-    <tr>
-    <table align="center" border="0" cellpadding="8" cellspacing="0">
-        <tbody>
-            <tr>
-                <td align="right"><b>Black aoves ahead:</b></td>
-                <td>
-                    <table align="right" border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
-                                <td width="44"></td>
-                                <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    </tr>
-    <tr>
-    <table align="center" border="0" cellpadding="8" cellspacing="0">
-        <tbody>
-            <tr>
-                <td><b>White jumps:&nbsp;</b></td>
-                <td>
-                    <table align="center" border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
-                                <td width="44"></td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    </tr>
-    <table align="center" border="0" cellpadding="8" cellspacing="0">
-        <tbody>
-            <tr>
-                <td><b>Black moves ahead:</b></td>
-                <td>
-                    <table align="center" border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                                <td width="44"></td>
-                                <td width="44"><img src="./Images/black-ball.gif" alt="" </td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table align="center" border="0" cellpadding="8" cellspacing="0">
-        <tbody>
-            <tr>
-                <td><b>Black jumps:&nbsp;</b></td>
-                <td>
-                    <table align="center" border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td width="44"></td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/black-ball.gif" alt="" </td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table align="center" border="0" cellpadding="8" cellspacing="0">
-        <tbody>
-            <tr>
-                <td><b>White moves ahead:</b></td>
-                <td>
-                    <table align="center" border="1" bgcolor="#ddddd" cellpadding="6" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td width="44"></td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/black-ball.gif" alt=""></td>
-                                <td width="44"><img src="./Images/white-ball.gif" alt=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table align="center" border="0" cellpadding="8" cellspacing="0">
-        <tbody>
-            <tr>
-                <td><b>Stuck!</b></td>
-                <td>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td width="44"></td>
-                                <td width="44"></td>
-                                <td width="44"></td>
-                                <td width="44"></td>
-                                <td width="44"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</table>
     <br>
     Now to the program. The main program will initialize the board, and call a recursive backtracking routine to attempt
     to solve the puzzle. The backtracking routine will either succeed and print out a winning path, or it will fail, and
@@ -745,24 +727,24 @@
     methods <big style="color: maroon;">puzzleSolved</big> and <big style="color: maroon;">printBoard</big> with
     meanings that should be obvious.
     <p>Here is some output from the program:</p>
-<pre style="font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
+    <pre style="font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
 <b><strong>   
-16.  WHITE  WHITE  WHITE  _____  BLACK  BLACK  BLACK
-15.  WHITE  WHITE  WHITE  BLACK  _____  BLACK  BLACK
-14.  WHITE  WHITE  _____  BLACK  WHITE  BLACK  BLACK
-13.  WHITE  _____  WHITE  BLACK  WHITE  BLACK  BLACK
-12.  WHITE  BLACK  WHITE  _____  WHITE  BLACK  BLACK
-11.  WHITE  BLACK  WHITE  BLACK  WHITE  _____  BLACK
-10.  WHITE  BLACK  WHITE  BLACK  WHITE  BLACK  _____
- 9.  WHITE  BLACK  WHITE  BLACK  _____  BLACK  WHITE
- 8.  WHITE  BLACK  _____  BLACK  WHITE  BLACK  WHITE
- 7.  _____  BLACK  WHITE  BLACK  WHITE  BLACK  WHITE
- 6.  BLACK  _____  WHITE  BLACK  WHITE  BLACK  WHITE
- 5.  BLACK  BLACK  WHITE  _____  WHITE  BLACK  WHITE
- 4.  BLACK  BLACK  WHITE  BLACK  WHITE  _____  WHITE
- 3.  BLACK  BLACK  WHITE  BLACK  _____  WHITE  WHITE
- 2.  BLACK  BLACK  _____  BLACK  WHITE  WHITE  WHITE
- 1.  BLACK  BLACK  BLACK  _____  WHITE  WHITE  WHITE
+<font color="#2249DC">16.</font>  WHITE  WHITE  WHITE  _____  BLACK  BLACK  BLACK
+<font color="#2249DC">15.</font>  WHITE  WHITE  WHITE  BLACK  _____  BLACK  BLACK
+<font color="#2249DC">14.</font>  WHITE  WHITE  _____  BLACK  WHITE  BLACK  BLACK
+<font color="#2249DC">13.</font>  WHITE  _____  WHITE  BLACK  WHITE  BLACK  BLACK
+<font color="#2249DC">12.</font>  WHITE  BLACK  WHITE  _____  WHITE  BLACK  BLACK
+<font color="#2249DC">11.</font>  WHITE  BLACK  WHITE  BLACK  WHITE  _____  BLACK
+<font color="#2249DC">10.</font>  WHITE  BLACK  WHITE  BLACK  WHITE  BLACK  _____
+<font color="#2249DC">9.</font>   WHITE  BLACK  WHITE  BLACK  _____  BLACK  WHITE
+<font color="#2249DC">8.</font>   WHITE  BLACK  _____  BLACK  WHITE  BLACK  WHITE
+<font color="#2249DC">7.</font>   _____  BLACK  WHITE  BLACK  WHITE  BLACK  WHITE
+<font color="#2249DC">6.</font>   BLACK  _____  WHITE  BLACK  WHITE  BLACK  WHITE
+<font color="#2249DC">5.</font>   BLACK  BLACK  WHITE  _____  WHITE  BLACK  WHITE
+<font color="#2249DC">4.</font>   BLACK  BLACK  WHITE  BLACK  WHITE  _____  WHITE
+<font color="#2249DC">3.</font>   BLACK  BLACK  WHITE  BLACK  _____  WHITE  WHITE
+<font color="#2249DC">2.</font>   BLACK  BLACK  _____  BLACK  WHITE  WHITE  WHITE
+<font color="#2249DC">1.</font>   BLACK  BLACK  BLACK  _____  WHITE  WHITE  WHITE
 </b></strong> 
 </pre>
 
